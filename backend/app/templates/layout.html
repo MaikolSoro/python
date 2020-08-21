@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		{% block title %}
+		<!-- titulo de cada página -->
+		{% endblock%}
+		| Michael</title>
+</head>
+<body>
+
+	<h1>Sitio web con Django| Maikol Soro</h1>
+	<hr />
+	<ul>
+		<li>
+			<a href="/inicio">Inicio</a>
+		</li>
+		<li>
+			<a href="/hola-mundo">Hola mundo</a>
+		</li>
+		<li>
+			<a href="/pagina">Página</a>
+		</li>
+		<li>
+			<a href="/contacto">Contacto</a>
+		</li>
+
+	</ul>
+	<hr />
+
+	<div id="content">
+		{% block content %}
+		<!--Código que viene de templates-->
+		{% endblock%}
+	</div>
+	<footer>
+		Django &copy; Michael Soro Zúñiga
+	</footer>
+</body>
+</html>
