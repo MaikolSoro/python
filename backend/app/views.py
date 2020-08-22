@@ -8,7 +8,11 @@ def index(request):
 	template = """
 		<h1>Inicio</h1>
 	"""
-	return render(request, 'index.html')
+	return render(request, 'index.html', {
+		'title' : 'Inicio',
+		'mi_variable' : 'Soy un dato que está en la vista'
+	})
+
 def app(request):
 	return HttpResponse("Hola mundo Django!!")
 
