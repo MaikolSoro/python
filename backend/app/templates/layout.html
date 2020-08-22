@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,33 +9,48 @@
 		<!-- titulo de cada página -->
 		{% endblock%}
 		| Michael</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
 </head>
 <body>
+	<!-- Cabecera de la página -->
 
-	<h1>Sitio web con Django| Maikol Soro</h1>
-	<hr />
-	<ul>
-		<li>
-			<a href="/inicio">Inicio</a>
-		</li>
-		<li>
-			<a href="/hola-mundo">Hola mundo</a>
-		</li>
-		<li>
-			<a href="/pagina">Página</a>
-		</li>
-		<li>
-			<a href="/contacto">Contacto</a>
-		</li>
-
-	</ul>
-	<hr />
-
+	<header>
+		<div id="logotipo">
+			<!--Logo django -->
+			<img src="{% static 'images/logo.png' %}" />
+			<h1>Sitio web con Django</h1>
+		</div>
+	</header>
+		<nav>
+			<ul>
+				<li>
+					<a href="/inicio">Inicio</a>
+				</li>
+				<li>
+					<a href="/hola-mundo">Hola mundo</a>
+				</li>
+				<li>
+					<a href="/pagina">Página</a>
+				</li>
+				<li>
+					<a href="/contacto">Contacto</a>
+				</li>
+		
+			</ul>
+		</nav>
+		<div  class="barra">
+			<span class="esquina-izquierda"></span>
+			<span class="relleno-barra"></span>
+			<span class="esquina-derecha"></span>
+		</div>
 	<div id="content">
-		{% block content %}
-		<!--Código que viene de templates-->
-		<strong>Contenido del bloque original!!</strong>
-		{% endblock%}
+		<div class="box">
+			{% block content %}
+			<!--Código que viene de templates-->
+			<strong>Contenido del bloque original!!</strong>
+			{% endblock%}
+
+		</div>
 	</div>
 	<footer>
 		Django &copy; Michael Soro Zúñiga
