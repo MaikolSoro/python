@@ -9,10 +9,13 @@ def index(request):
 		<h1>Inicio</h1>
 	"""
 	name = 'Michael'
+	languages = ['JavaScript', 'Python', 'PHP', 'Typescript']
+
 	return render(request, 'index.html', {
 		'title' : 'Inicio',
 		'mi_variable': 'Soy un dato que está en la vista',
-		'name': name
+		'name': name,
+		'languages': languages
 	})
 
 def app(request):

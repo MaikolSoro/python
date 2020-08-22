@@ -16,4 +16,12 @@
 <strong>El nombre no existe o no coincide</strong>
 {% endif %}
 
+	<h3>Listado de lenguajes de programación</h3>
+	<ul>
+	{% for language in languages %}
+		<li>{{forloop.counter}}. {{language}} </li>
+		{% empty %}
+		<p>No hay lenguajes Que mostrar</P>
+	{% endfor %}
+	</ul>
 {% endblock %}
