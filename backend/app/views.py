@@ -8,9 +8,11 @@ def index(request):
 	template = """
 		<h1>Inicio</h1>
 	"""
+	name = 'Michael'
 	return render(request, 'index.html', {
 		'title' : 'Inicio',
-		'mi_variable' : 'Soy un dato que está en la vista'
+		'mi_variable': 'Soy un dato que está en la vista',
+		'name': name
 	})
 
 def app(request):

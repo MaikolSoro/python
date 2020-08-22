@@ -8,5 +8,12 @@
 {% endcomment %}
 
 <h1 class="title">{{title}}</h1>
-{{mi_variable}}
+<p>{{mi_variable}}</p>
+
+{% if name and name == 'Michael' %}
+<p>{{name}}</p>
+{% else %}
+<strong>El nombre no existe o no coincide</strong>
+{% endif %}
+
 {% endblock %}
