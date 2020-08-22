@@ -3,6 +3,7 @@
 {% block title %} {{title}} {% endblock %}
 {% block content%}
 
+
 {% comment 'Esto es un comentario' %}
 	<h2>Comentario con Django</h2>
 {% endcomment %}
@@ -24,14 +25,7 @@
 		<p>No hay lenguajes Que mostrar</P>
 	{% endfor %}
 	</ul>
+	
+	{% include  'fecha_actual.html'  with saludo="Hola mundo desde plantilla" %}
 
-	<p>Años	hasta el 2050:</p>
-	<ul>
-		<!-- Ejercicio de los años y sacar los años  pares del 2021 a 2050-->
-		{% for year in years %}
-			{% if year|divisibleby:2 == True %}
-			<li>{{year}}</li>
-			{% endif %}
-		{% endfor %}
-	</ul>
 {% endblock %}

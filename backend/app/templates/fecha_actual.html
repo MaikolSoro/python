@@ -1,0 +1,14 @@
+<br/>
+<hr/>
+<br/>
+<h1>{{saludo}}: {{ name }}</h1>
+<h1>Estamos 2021</h1>
+<p>Años	hasta el 2050:</p>
+	<ul>
+		<!-- Ejercicio de los años y sacar los años  pares del 2021 a 2050-->
+		{% for year in years %}
+			{% if year|divisibleby:2 == True %}
+			<li>{{year}}</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
