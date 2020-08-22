@@ -8,6 +8,8 @@ def index(request):
 	template = """
 		<h1>Inicio</h1>
 	"""
+	year = 2021
+	to = range(year, 2051)
 	name = 'Michael'
 	languages = ['JavaScript', 'Python', 'PHP', 'Typescript']
 
@@ -15,7 +17,9 @@ def index(request):
 		'title' : 'Inicio',
 		'mi_variable': 'Soy un dato que está en la vista',
 		'name': name,
-		'languages': languages
+		'languages': languages,
+		'years': to
+
 	})
 
 def app(request):
