@@ -34,6 +34,9 @@ def pagina(request, redirigir=0):
 	if redirigir == 1:
 		return redirect('contacto', nombre ='Maikol', apeliidos="Soro Zúñiga")
 	
-	return render(request, 'pagina.html')
+	return render(request, 'pagina.html', {
+		'texto': 'Este mi texto',
+		'list': ['uno', 'dos', 'tres']
+	})
 	
 
