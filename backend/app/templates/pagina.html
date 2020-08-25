@@ -5,5 +5,58 @@
 {% block content %}
 
 	<h1 class="title">Página de mi web </h1>
-	<p>Creado por maikol</p>
+	<p>{{"Creado por maikol"|cut:" "}}</p>
+
+	<!-- Filtros -->
+	<!-- Saca el primero de la lista -->
+	<p>
+
+		{{list|first}}
+	</p>
+	<!-- Saca el ultimo de la lista -->
+	<p>
+
+		{{list|last}}
+	</p>
+
+	<!-- Mostrar los elementos bien ordenados -->
+	<p>
+		
+		{{list|join:', '}}
+	</p>
+	<!-- Sacar el total de los elementos que tiene esa lista   -->
+	<p>
+		
+		{{list|length}}
+	</p>
+	<!-- Sacar el numero de elementos o carácteres que tiene un string   -->
+	<p>
+		
+		{{"texto pruebas"|length}}
+	</p>
+	<!-- Convertirla a mayúscula -->
+	<p>
+		
+		{{"texto pruebas"|upper}}
+	</p>
+	<!-- Convertirla a minuscúla -->
+	<p>
+		
+		{{"TEXTO pruebas"|lower}}
+	</p>
+	<!-- Sacar numero o elemento aleatorio -->
+	<p>
+		
+		{{list|random}}
+	</p>
+	<!-- sacar cuado un dato se a guardado con html -->
+	<p>
+		
+		{{"<h1>texto</h1>"|striptags|wordcount}}
+	</p>
+	<!-- wordcount cuenta las palabras que hay dentro de un string-->
+	<p>
+		
+		{{"<h1>texto</h1>"|striptags|wordcount}}
+	</p>
 {% endblock %}
