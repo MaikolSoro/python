@@ -1,10 +1,11 @@
 # python
-Ejemplos básicos con django para el desarrollo web 🌐👨‍💻
+Basic examples with django for web development 🌐👨‍💻
  ### Plantillas y templates en Django
- - Templates separadas.
- - Layouts, bloques y herencia de plantillas.
- - Herencia en bloques, añadir contenido.
- - Vincular hojas de estilos CSS en Django.
+  -  Separate templates.
+  - Layouts, blocks and template inheritance.
+  - Inheritance in blocks, add content.
+  - Link CSS stylesheets in Django.
+
  
 ### Lenguaje de plantillas y template tags en Django
 - Comentarios en plantillas.
